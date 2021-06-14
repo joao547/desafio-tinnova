@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-lg-6">
+        <nb-card [nbSpinner]="isLoading"  nbSpinnerSize="giant" nbSpinnerStatus="danger">
+            <nb-card-header></nb-card-header>
+            <nb-card-body>
+                <input type="text" nbInput fullWidth placeholder="Nome do veiculo" [(ngModel)]="veiculo.veiculo">
+                <input type="text" nbInput fullWidth placeholder="Marca do veiculo" [(ngModel)]="veiculo.marca">
+                <input type="number" max="2022" min="1900" nbInput fullWidth placeholder="Ano do veiculo" [(ngModel)]="veiculo.ano">
+                <textarea rows="5" nbInput fullWidth shape="round" placeholder="Descriçao" [(ngModel)]="veiculo.descricao"></textarea>
+                <button type="submit" (click)="createVeiculo()" nbButton status="primary">Submit</button>
+            </nb-card-body>
+        </nb-card>
+    </div>
+</div>
